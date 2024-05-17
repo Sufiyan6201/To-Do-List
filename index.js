@@ -30,7 +30,6 @@ app.get('/delete-task', (req, res) => {
 app.get('/edite-task', (req, res) => {
      const Id = req.query.Id
      let { task } = req.body
-     console.log(todoList.item);
      let item = todoList.filter((task, i) => {
           return Id == i
      })
@@ -46,7 +45,6 @@ app.post('/edite-task', (req, res) => {
      let  task  = todoList.filter((task, i) => {
           if (taskId == i) {
                task.task = ts.task
-               console.log(ts);
           }
           return task
      });
